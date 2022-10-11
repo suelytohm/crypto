@@ -1,0 +1,29 @@
+.card {
+  width: 80%;
+  color: #fff;
+  height: 200px;
+  border-radius: 25px;
+  border: #fff 3px solid;
+  margin-top: 25px;
+  text-decoration: none;
+
+  padding: 20px;
+}
+
+.green {
+  background-color: #059862;
+  box-shadow: 0 4px 8px 0 rgba(5, 152, 98, 0.9);
+}
+
+.red {
+  background-color: rgb(197, 61, 114);
+  box-shadow: 0 4px 8px 0 rgba(197, 61, 114, 0.9);
+}
+
+.card img {
+  width: 50px;
+}
+
+.card h2 {
+  font-size: 25px;
+}
