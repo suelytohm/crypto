@@ -28,7 +28,7 @@ function App() {
       <div className="container">
         <h1>Top Cryptos</h1>
         <div className="criptos">
-          {crypto.slice(0, 30).map((currency, key) => (
+          {crypto.slice(0, 15).map((currency, key) => (
             <Card
               key={key}
               name={currency.name}

@@ -21,7 +21,10 @@ export const Card = ({ name, symbol, priceUsd, changePercent24Hr }) => {
         {name} ({symbol})
       </h2>
       <p>Preço(USD): ${priceUsd}</p>
-      <p>Var(24h): {changePercent24Hr}</p>
+      <p>
+        Var(24h):{" "}
+        {changePercent24Hr > 0 ? "+" + changePercent24Hr : changePercent24Hr}
+      </p>
       <img src={corCard === "red" ? Down : Up} alt="" />
     </div>
   );
