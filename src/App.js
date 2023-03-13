@@ -7,17 +7,28 @@ function App() {
   const [crypto, setCrypto] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://api.coincap.io/v2/assets")
-      .then(function (response) {
-        // handle success
-        setCrypto(response.data.data);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      });
+
+    buscarDados()
+
+    const intervalo = setInterval(() => {
+        buscarDados()
+        return () => clearInterval(intervalo);
+    }, 60000);
+    
   }, []);
+
+  const buscarDados = () => {
+    axios
+    .get("https://api.coincap.io/v2/assets")
+    .then(function (response) {
+      // handle success
+      setCrypto(response.data.data);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    });
+  }
 
   const financial = (x) => {
     return Number.parseFloat(x).toFixed(2);
@@ -27,6 +38,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1>Top Cryptos</h1>
+        <p>As 15 criptomoedas mais negociadas</p>
         <div className="criptos">
           {crypto.slice(0, 15).map((currency, key) => (
             <Card
