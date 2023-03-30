@@ -5,6 +5,7 @@ const axios = require("axios").default;
 
 function App() {
   const [crypto, setCrypto] = useState([]);
+  const [horaAtualizacao, setHoraAtualizacao] = useState("")
 
   useEffect(() => {
 
@@ -18,6 +19,10 @@ function App() {
   }, []);
 
   const buscarDados = () => {
+
+    let now = new Date();
+    setHoraAtualizacao(`${now.getHours()}:${now.getMinutes()}`)
+
     axios
     .get("https://api.coincap.io/v2/assets")
     .then(function (response) {
@@ -37,8 +42,9 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Top Cryptos</h1>
-        <p>As 15 criptomoedas mais negociadas</p>
+        <h1>Top Cryptos - As 15 criptomoedas mais negociadas</h1>
+        
+        <p>Última atualização: {horaAtualizacao}</p>
         <div className="criptos">
           {crypto.slice(0, 15).map((currency, key) => (
             <Card
