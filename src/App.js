@@ -47,7 +47,9 @@ function App() {
       <div className="container">
         <h1>Top Cryptos - As 15 criptomoedas mais negociadas</h1>
 
-        <p>Última atualização: {horaAtualizacao}</p>
+        <p>
+          Atualizações a cada minuto (Última atualização: {horaAtualizacao})
+        </p>
         <div className="criptos">
           {crypto.slice(0, 15).map((currency, key) => (
             <Card
