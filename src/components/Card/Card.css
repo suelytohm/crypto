@@ -1,15 +1,16 @@
 .card {
-  width: 80%;
+  width: 100%;
   color: #fff;
   height: 150px;
-  border-radius: 25px;
-  border: #fff 3px solid;
-  margin-top: 25px;
+  border-radius: 15px;
+  border: #fff 1px solid;
+  /* margin-top: 25px; */
   text-decoration: none;
 
-  padding: 20px;
+  /* padding: 20px; */
   transition: 0.7s all;
-
+  padding-bottom: 15px;
+  /* margin: 10px; */
 }
 
 .green {
@@ -47,8 +48,7 @@
 
 .card:hover {
   cursor: pointer;
-  -webkit-box-shadow: 10px 10px 50px -3px rgba(10,166,106,0.99);
-  -moz-box-shadow: 10px 10px 50px -3px rgba(10,166,106,0.99);
-  box-shadow: 10px 10px 50px -3px rgba(10,166,106,0.99);
-
+  -webkit-box-shadow: 10px 10px 50px -3px rgba(10, 166, 106, 0.99);
+  -moz-box-shadow: 10px 10px 50px -3px rgba(10, 166, 106, 0.99);
+  box-shadow: 10px 10px 50px -3px rgba(10, 166, 106, 0.99);
 }

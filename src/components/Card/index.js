@@ -24,8 +24,10 @@ export const Card = ({ name, symbol, priceUsd, changePercent24Hr }) => {
         <div className="text-card">
           <p>Preço(USD): ${priceUsd}</p>
           <p>
-            Var(24h):{" "}
-            {changePercent24Hr > 0 ? "+" + changePercent24Hr : changePercent24Hr}
+            Variação:{" "}
+            {changePercent24Hr > 0
+              ? "+" + changePercent24Hr
+              : changePercent24Hr}
           </p>
         </div>
         <img src={corCard === "red" ? Down : Up} alt="" />
