@@ -45,13 +45,12 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Top Cryptos - As 15 criptomoedas mais negociadas</h1>
-
+        <h1>Top Cryptos - As 30 criptomoedas mais negociadas</h1>
         <p>
           Atualizações a cada minuto (Última atualização: {horaAtualizacao})
         </p>
         <div className="criptos">
-          {crypto.slice(0, 15).map((currency, key) => (
+          {crypto.slice(0, 30).map((currency, key) => (
             <Card
               key={key}
               name={currency.name}
