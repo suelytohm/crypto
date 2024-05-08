@@ -65,7 +65,7 @@ function App() {
         <p>
           Desenvolvido por{" "}
           <a
-            href="https://suelytohm-portfolio.netlify.com/"
+            href="https://suelytohm-portfolio.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
