@@ -3,7 +3,7 @@
   color: #fff;
   height: 150px;
   border-radius: 15px;
-  border: #fff 1px solid;
+  /* border: #fff 1px solid; */
   /* margin-top: 25px; */
   text-decoration: none;
 
@@ -14,13 +14,21 @@
 }
 
 .green {
-  background-color: #059862;
-  box-shadow: 0 4px 8px 0 rgba(5, 152, 98, 0.9);
+  background: rgba(36, 209, 1, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 10px;
+  border: #009b2e 1px solid;
 }
 
 .red {
-  background-color: rgb(197, 61, 114);
-  box-shadow: 0 4px 8px 0 rgba(197, 61, 114, 0.9);
+  background: rgba(242, 0, 0, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 10px;
+  border: #9b0000 1px solid;
 }
 
 .card img {
@@ -46,9 +54,18 @@
   text-align: left;
 }
 
-.card:hover {
+.green:hover {
   cursor: pointer;
+  background: rgba(36, 209, 1, 0.8);
   -webkit-box-shadow: 10px 10px 50px -3px rgba(10, 166, 106, 0.99);
   -moz-box-shadow: 10px 10px 50px -3px rgba(10, 166, 106, 0.99);
   box-shadow: 10px 10px 50px -3px rgba(10, 166, 106, 0.99);
+}
+
+.red:hover {
+  cursor: pointer;
+  background: rgba(242, 0, 0, 0.8);
+  -webkit-box-shadow: 10px 10px 50px -3px rgba(228, 0, 0, 0.99);
+  -moz-box-shadow: 10px 10px 50px -3px rgba(228, 0, 0, 0.99);
+  box-shadow: 10px 10px 50px -3px rgba(228, 0, 0, 0.99);
 }

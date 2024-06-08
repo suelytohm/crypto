@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Card.css";
 
-import Up from "../../assets/images/up.png";
-import Down from "../../assets/images/down.png";
+// import Up from "../../assets/images/up.png";
+// import Up from "../../assets/svg/arrowUp.svg";
+import Up from "../../assets/svg/up.png";
+// import Down from "../../assets/images/down.png";
+import Down from "../../assets/svg/down.png";
 
 export const Card = ({ name, symbol, priceUsd, changePercent24Hr }) => {
   const [corCard, setCorCard] = useState("");

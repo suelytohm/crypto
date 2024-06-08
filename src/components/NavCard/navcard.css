@@ -1,0 +1,32 @@
+.nav-card {
+  margin: auto;
+  width: 150px;
+  background-color: black;
+  padding: 15px;
+  display: flex;
+  height: 10px;
+  justify-content: center;
+  align-items: center;
+  border-left: #fff 1px solid;
+}
+
+.nav-body-card {
+  display: flex;
+  padding: 5px;
+  justify-items: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-body-card > img {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.nav-card > .nav-card > p {
+  color: #fff;
+}
+
+.nav-card > img {
+  max-width: 20px !important;
+}

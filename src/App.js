@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import { Card } from "./components/Card";
+import { NavCard } from "./components/NavCard";
+import Marquee from "react-fast-marquee";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 const axios = require("axios").default;
 
 function App() {
@@ -42,8 +46,43 @@ function App() {
     return Number.parseFloat(x).toFixed(2);
   };
 
+  const changeVariant = (value) => {
+    if (value > 0) {
+      return "success";
+    }
+    return "error";
+  };
+
   return (
     <div className="App">
+      <div className="nav-marquee">
+        <Marquee
+          gradient={true}
+          gradientWidth={100}
+          gradientColor="#000"
+          delay={2}
+          pauseOnHover={true}
+        >
+          {crypto.slice(0, 30).map((currency, key) => (
+            <a
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content={`${currency.name} ${financial(
+                currency.changePercent24Hr
+              )}`}
+              href="/"
+              data-tooltip-variant={changeVariant(currency.changePercent24Hr)}
+            >
+              <NavCard
+                key={key}
+                name={currency.name}
+                symbol={currency.symbol}
+                priceUsd={financial(currency.priceUsd)}
+                changePercent24Hr={financial(currency.changePercent24Hr)}
+              />
+            </a>
+          ))}
+        </Marquee>
+      </div>
       <div className="container">
         <h1>Top Cryptos - As 30 criptomoedas mais negociadas</h1>
         <p>
@@ -73,6 +112,7 @@ function App() {
           </a>
         </p>
       </footer>
+      <Tooltip id="my-tooltip" />
     </div>
   );
 }

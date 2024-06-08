@@ -26,6 +26,7 @@ h2 {
 }
 
 .container {
+  margin: 0;
   display: flex;
   padding: 25px;
   flex-direction: column;
@@ -44,4 +45,15 @@ h2 {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.nav-marquee {
+  margin: 0;
+  height: 60px;
+  max-width: 100%;
+  display: flex;
+  top: 0;
+  position: sticky;
+  background-color: black;
+  z-index: 1000;
 }
